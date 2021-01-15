@@ -22,7 +22,7 @@
             font-size: 25px;
             font-weight: bold;
             span {
-              color: #ea5a43;
+              color: $GallaryColor;
             }
           }
         }
@@ -86,7 +86,7 @@
               }
               &.active {
                 a {
-                  color: #ea5a43;
+                  color: $GallaryColor;
                 }
               }
             }
@@ -101,7 +101,7 @@
                   transition: 0.4s;
                   @media (min-width: 992px) {
                     &:hover {
-                      color: #ea5a43;
+                      color: $GallaryColor;
                       transform: rotate(360deg);
                     }
                   }
@@ -183,7 +183,7 @@
       font-weight: bold;
       color: #fff;
       span {
-        color: #ea5a43;
+        color: $GallaryColor;
       }
     }
   }
