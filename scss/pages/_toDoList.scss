@@ -1,0 +1,129 @@
+.todo-container {
+  width: 600px;
+  margin: 30px auto 0;
+  background-color: #f6f6f6;
+  .add-task {
+    position: relative;
+    padding: 15px;
+    background-color: #009688;
+    input {
+      display: inline-block;
+      padding: 7px 15px;
+      border: none;
+      background-color: rgba(255, 255, 255, 0.3);
+      width: calc(100% - 15px);
+      color: #fff;
+      font-size: 20px;
+      &:focus {
+        outline: none;
+      }
+    }
+    .plus {
+      position: absolute;
+      right: 12px;
+      width: 43px;
+      height: 43px;
+      line-height: 43px;
+      font-size: 38px;
+      background-color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      color: #009688;
+      cursor: pointer;
+      transition: transform 0.3s;
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .tasks-content {
+    padding: 15px;
+    .no-tasks-message {
+      color: #777;
+      font-size: 15px;
+    }
+    > span {
+      display: block;
+      background-color: #fff;
+      padding: 10px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+    .task-box {
+      cursor: pointer;
+      .delete {
+        float: right;
+        background-color: #e91e63;
+        color: #fff;
+        padding: 4px 10px 4px;
+        font-size: 12px;
+        border-radius: 4px;
+        user-select: none;
+        cursor: pointer;
+      }
+      &.finished {
+        text-decoration: line-through solid red;
+      }
+    }
+  }
+}
+
+.task-stats {
+  margin: 10px auto;
+  width: 600px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  .tasks-count {
+    span {
+      background-color: #e91e63;
+    }
+  }
+  .tasks-compeleted {
+    span {
+      background-color: #03a9f4;
+    }
+  }
+  .tasks-count,
+  .tasks-compeleted {
+    padding: 10px;
+    span {
+      color: #fff;
+      padding: 1px 5px;
+      font-size: 10px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+  }
+}
+
+.deleteButtons {
+  margin: 10px auto;
+  width: 600px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  #deleteAll,
+  #deleteFinished {
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    &:focus {
+      outline: none;
+    }
+  }
+  #deleteAll {
+    background-color: #e91e63;
+    &:hover {
+      background-color: #ff075b;
+    }
+  }
+  #deleteFinished {
+    background-color: #0095d8;
+    &:hover {
+      background-color: #03a9f4;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.book {
+  background-color: #708d00;
+}
+.book-section {
+  .book-card {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    transform: translate(-50%, -50%) perspective(2000px);
+    transform-style: preserve-3d;
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5),
+      0 20px 100px rgba(0, 0, 0, 0.5);
+    transition: 1s;
+    &:hover {
+      transform: translate(-50%, -50%) perspective(2000px) rotate(-10deg);
+      box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5),
+        0 10px 100px rgba(0, 0, 0, 0.5);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: #475b02;
+      transform-origin: bottom;
+      transform: skewX(-45deg);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -5px;
+      width: 5px;
+      height: 100%;
+      background: #7ea301;
+      transform-origin: left;
+      transform: skewY(-45deg);
+    }
+    .imgBox {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-origin: left;
+      backface-visibility: hidden;
+      z-index: 1;
+      transition: 1s cubic-bezier(0.15, 1.7, 0.84, 0.58);
+      box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.3);
+      img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        image-rendering: pixelated;
+      }
+    }
+    .backImg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-origin: left;
+      transition: 1s cubic-bezier(0.15, 1.7, 0.84, 0.58);
+      z-index: 1;
+      opacity: 0;
+      img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: rotateY(90deg);
+        image-rendering: pixelated;
+      }
+    }
+    &:hover {
+      .imgBox {
+        transform: rotateY(-135deg);
+      }
+      .backImg {
+        transform: rotateY(-135deg);
+        opacity: 1;
+        box-shadow: 10px 5px 15px 5px rgba(0, 0, 0, 0.5);
+        img {
+          transform: rotateY(-180deg);
+        }
+      }
+      .details {
+        box-shadow: 10px 5px 15px 5px rgba(0, 0, 0, 0.5);
+      }
+    }
+    .details {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      padding: 20px;
+      z-index: -1;
+      h3 {
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+    &.opended {
+      transform: translate(-50%, -50%) perspective(2000px) rotate(-10deg);
+      box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5),
+        0 10px 100px rgba(0, 0, 0, 0.5);
+    }
+  }
+}

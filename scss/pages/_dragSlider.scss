@@ -1,0 +1,38 @@
+.main-head {
+  user-select: none;
+}
+.slider {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  width: 80%;
+  height: 200px;
+  overflow: hidden;
+  .slider-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    pointer-events: none;
+    transition: 0s ease;
+    .slide-img {
+      height: 100%;
+      background-color: #000;
+      text-align: center;
+      padding: 3rem;
+      i {
+        color: #fff;
+        font-size: 3rem;
+        pointer-events: auto;
+        cursor: pointer;
+        &:hover {
+          color: rgb(167, 11, 245);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+1- A place to choose type of book or magazine
+2- A place to edit the title
+3- A place to change the cover background
+4- A place to type your pages
+5- A place to navigate through pages
+6- A place to Open the book
+7- A place to add pages
+8- A place to add background or remove background form page
+9- A place to choose colors

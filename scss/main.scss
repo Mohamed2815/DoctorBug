@@ -1,0 +1,15 @@
+@import "other/_variables.scss";
+@import "other/_global.scss";
+@import "other/_mixins.scss";
+@import "other/_animation.scss";
+@import "pages/_portfolio.scss";
+@import "pages/_bookList.scss";
+@import "pages/_eBook.scss";
+@import "pages/_slider.scss";
+@import "pages/_dragSlider.scss";
+@import "pages/_memoryGame.scss";
+@import "pages/_toDoList.scss";
+
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
