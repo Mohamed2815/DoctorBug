@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=efge" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="../css/libs/all.css" />
+    <link rel="stylesheet" href="../css/libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/libs/sweetalert2.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+
+  <body class="game">
+    <div class="splash-screen">
+      <span>Start Game</span>
+    </div>
+
+    <div class="info-container">
+      <div class="name">Hello: <span></span></div>
+      <div class="time">Remaning Time: <span>1:30</span></div>
+      <div class="tries">Wrong Tries: <span>0</span></div>
+    </div>
+
+    <div class="memory-game-blocks mt-5">
+      <div class="game-block" data-technology="angular">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/angular.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="angular">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/angular.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="vuejs">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/vuejs.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="vuejs">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/vuejs.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="css3">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/css3.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="css3">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/css3.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="github">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/github.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="github">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/github.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="gulpjs">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/gulpjs.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="gulpjs">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/gulpjs.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="html5">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/html5.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="html5">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/html5.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="js">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/js.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="js">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/js.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="mongodb">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/monogodb.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="mongodb">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/monogodb.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="python">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/python.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="python">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/python.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="react">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/react.png" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-technology="react">
+        <div class="face front">
+          <h2>!</h2>
+          <div class="wrapper">
+            <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="face back">
+          <img src="../images/memoryGame/react.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="players-boared"></div>
+
+    <audio id="success" src="../audio/success.mp3" preload="auto"></audio>
+    <audio id="fail" src="../audio/fail.mp3" preload="auto"></audio>
+    <audio id="timeUp" src="../audio/timeisup.mp3" preload="auto"></audio>
+
+    <script src="../js/libs/sweetalert2.all.min.js"></script>
+    <script src="../js/pages/memoryGame.js"></script>
+  </body>
+</html>

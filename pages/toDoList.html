@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=efge" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="../css/libs/all.css" />
+    <link rel="stylesheet" href="../css/libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/libs/sweetalert2.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+
+  <body>
+    <div class="todo-container">
+      <div class="add-task">
+        <input type="text" />
+        <span class="plus">+</span>
+      </div>
+      <div class="tasks-content">
+        <span class="no-tasks-message">No tasks to show</span>
+      </div>
+    </div>
+
+    <div class="task-stats">
+      <div class="tasks-count">Tasks: <span>0</span></div>
+      <div class="tasks-compeleted">Compeleted: <span>0</span></div>
+    </div>
+
+    <div class="deleteButtons">
+      <button id="deleteAll">Delete All</button>
+      <button id="deleteFinished">Delete Finished</button>
+    </div>
+
+    <script src="../js/libs/sweetalert2.all.min.js"></script>
+    <script src="../js/pages/toDoList.js"></script>
+  </body>
+</html>
