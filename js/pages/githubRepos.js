@@ -54,6 +54,15 @@ function getRepos() {
           mainDiv.className = "repo-box";
           reposData.appendChild(mainDiv);
         });
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        Swal.fire({
+          icon: "error",
+          title: "Erorr.",
+          text: "There is no such user",
+        });
+        reposData.classList.remove("showUp");
       });
     reposData.classList.add("showUp");
   }
