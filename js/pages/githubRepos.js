@@ -7,6 +7,11 @@ getButton.onclick = function () {
   getRepos();
 };
 
+mainIput.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    getButton.click();
+  }
+});
 // Get Repos Function
 function getRepos() {
   if (mainIput.value == "" || mainIput.value == null) {
