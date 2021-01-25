@@ -115,7 +115,7 @@ document.addEventListener("click", (e) => {
       }).then(function () {
         location.reload();
       });
-      document.getElementById("success").play();
+      document.getElementById("crowd").play();
     }
 
     //? If letter is wrong Increase wrong attempts
