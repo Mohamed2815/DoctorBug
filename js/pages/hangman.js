@@ -161,7 +161,7 @@ function endGame() {
     icon: "error",
     title: "Oops...",
     text: `Game Over, the word is ${randomValueName}`,
-    confirmButtonText: "Play again?",
+    confirmButtonText: "Try again?",
     backdrop: `
       rgba(226,5,5,0.4)
       url("../../images/hanged.gif")
