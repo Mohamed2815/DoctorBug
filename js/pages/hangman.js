@@ -76,6 +76,7 @@ let theDraw = document.querySelector(".hangman-draw"),
 
 // Handle Clcking on Letters
 let guessSpans = document.querySelectorAll(".guessed-letters span"),
+  lettersParent = document.querySelector(".letters"),
   chosenLettersArray = [];
 
 document.addEventListener("click", (e) => {
@@ -86,6 +87,10 @@ document.addEventListener("click", (e) => {
       chosenWord = Array.from(randomValueName.toLowerCase());
 
     e.target.classList.add("clicked");
+    lettersParent.classList.add("stopClicking");
+    setTimeout(function () {
+      lettersParent.classList.remove("stopClicking");
+    }, 500);
 
     //? Check if the clicked letter matches the chosen one
     chosenWord.forEach((wordLetter, wordIndex) => {
@@ -129,6 +134,7 @@ document.addEventListener("click", (e) => {
 
       if (wrongAttempts == 5) {
         crowedComment.classList.add("angryOne");
+        document.getElementById("angryCrowd").play();
       }
 
       if (wrongAttempts == 6) {

@@ -341,6 +341,9 @@ $drawWidth: 4px;
     &.finished {
       pointer-events: none;
     }
+    &.stopClicking {
+      pointer-events: none;
+    }
   }
   .guessed-letters {
     margin: 10px auto;

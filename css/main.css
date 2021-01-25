@@ -1054,6 +1054,8 @@ img {
         pointer-events: none; }
     .container .letters.finished {
       pointer-events: none; }
+    .container .letters.stopClicking {
+      pointer-events: none; }
   .container .guessed-letters {
     margin: 10px auto;
     background-color: #f8f8f8;
