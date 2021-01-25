@@ -162,6 +162,12 @@ function endGame() {
     title: "Oops...",
     text: `Game Over, the word is ${randomValueName}`,
     confirmButtonText: "Play again?",
+    backdrop: `
+      rgba(226,5,5,0.4)
+      url("../../images/hanged.gif")
+      left top
+      no-repeat
+    `,
   }).then(function () {
     location.reload();
   });
