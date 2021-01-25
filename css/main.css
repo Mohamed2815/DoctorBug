@@ -1073,11 +1073,11 @@ img {
       background-color: #fdfdfd;
       border-bottom: 3px solid #222;
       transition: 0.3s; }
-      .container .guessed-letters span.white-space {
+      .container .guessed-letters span.has-space {
         background: none;
         border-bottom: none;
         position: relative; }
-        .container .guessed-letters span.white-space::before {
+        .container .guessed-letters span.has-space::before {
           content: "";
           width: 20px;
           height: 4px;
