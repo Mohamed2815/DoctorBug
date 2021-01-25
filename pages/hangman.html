@@ -3,7 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="../css/libs/all.css" />
+    <link rel="stylesheet" href="../css/libs/bootstrap5.min.css" />
+    <link rel="stylesheet" href="../css/libs/sweetalert2.css" />
+    <link rel="stylesheet" href="../css/main.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="game-info">
+        <div class="game-name">Hangman</div>
+        <div class="category">Word form: <span></span></div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="hangman-draw col-6">
+          <div class="crowd">
+            <img src="../images/000.png" alt="Crowd" />
+          </div>
+          <div class="the-draw">
+            <div class="the-stand"></div>
+            <div class="the-hang"></div>
+            <div class="the-rope"></div>
+            <div class="the-man">
+              <div class="head scared"></div>
+              <div class="body"></div>
+              <div class="arm"></div>
+              <div class="legs"></div>
+            </div>
+          </div>
+        </div>
+        <div class="letters col-6"></div>
+      </div>
+
+      <hr />
+
+      <div class="guessed-letters"></div>
+    </div>
+
+    <audio id="success" src="../audio/success.mp3" preload="auto"></audio>
+    <audio id="fail" src="../audio/hangmanFail.mp3" preload="auto"></audio>
+    <audio id="timesUp" src="../audio/hangmanTimsUp.mp3" preload="auto"></audio>
+
+    <script src="../js/libs/bootstrap5.min.js"></script>
+    <script src="../js/libs/sweetalert2.all.min.js"></script>
+    <script src="../js/pages/hangman.js"></script>
+  </body>
 </html>

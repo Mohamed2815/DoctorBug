@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
 *,
@@ -800,5 +801,290 @@ img {
         background-color: #ff0057; }
     .repos .show-data .repo-box span {
       background-color: #009688; }
+
+.container {
+  margin: 20px auto; }
+  .container .game-info {
+    display: flex;
+    justify-content: space-between; }
+    .container .game-info .category span {
+      text-transform: capitalize;
+      color: #e91e63;
+      font-weight: bold; }
+  .container hr {
+    border: 1px solid #eee; }
+  .container .hangman-draw {
+    position: relative;
+    background-color: #f8f8f8;
+    padding: 20px;
+    height: 324px; }
+    .container .hangman-draw .crowd img {
+      position: absolute;
+      width: 42%;
+      left: 0;
+      bottom: 0;
+      image-rendering: pixelated; }
+    .container .hangman-draw .crowd.angryOne::before, .container .hangman-draw .crowd.angryTwo::before, .container .hangman-draw .crowd.angryThree::before {
+      content: "\f075";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      position: absolute;
+      font-size: 170px;
+      top: 0;
+      left: 70px;
+      z-index: 1;
+      color: #b5b5b5; }
+    .container .hangman-draw .crowd.angryOne::after {
+      content: "Why is he still alive! 😡";
+      position: absolute;
+      z-index: 2;
+      color: #000;
+      font-size: 14px;
+      top: 112px;
+      left: 91px; }
+    .container .hangman-draw .crowd.angryTwo::after {
+      content: "You are Gonna die baby 😁";
+      position: absolute;
+      z-index: 2;
+      color: #000;
+      font-size: 14px;
+      top: 112px;
+      left: 82px; }
+    .container .hangman-draw .crowd.angryThree::after {
+      content: "Good luck in the afterlife 😜";
+      position: absolute;
+      z-index: 2;
+      color: #000;
+      font-size: 14px;
+      top: 112px;
+      left: 78px; }
+    .container .hangman-draw .the-draw {
+      position: relative;
+      width: 85px;
+      height: 100%;
+      border-bottom: 40px solid #222;
+      margin: auto;
+      bottom: -18px;
+      display: none; }
+      .container .hangman-draw .the-draw .the-stand {
+        position: absolute;
+        width: 4px;
+        background-color: #222;
+        height: 100%;
+        left: 50%;
+        margin-left: -2px;
+        display: none; }
+      .container .hangman-draw .the-draw .the-hang {
+        display: none; }
+        .container .hangman-draw .the-draw .the-hang::before {
+          content: "";
+          position: absolute;
+          width: 100px;
+          height: 4px;
+          background-color: #222;
+          left: 42px;
+          top: 15px; }
+        .container .hangman-draw .the-draw .the-hang::after {
+          content: "";
+          position: absolute;
+          width: 4px;
+          height: 30px;
+          background-color: #222;
+          left: 138px;
+          top: 15px; }
+      .container .hangman-draw .the-draw .the-rope {
+        display: none;
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        left: 104px;
+        top: 45px;
+        border: 4px dashed #222; }
+      .container .hangman-draw .the-draw .the-man .head {
+        display: none;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 4px solid #222;
+        left: 114px;
+        top: 55px; }
+        .container .hangman-draw .the-draw .the-man .head.scared::before {
+          content: "\f57f";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 45px; }
+        .container .hangman-draw .the-draw .the-man .head.scared::after {
+          content: "Be Careful I'm gonna die";
+          position: absolute;
+          width: 144px;
+          height: 30px;
+          background-color: #b5b5b5;
+          padding: 5px;
+          top: 8px;
+          left: 60px;
+          border-radius: 25px;
+          font-size: 14px; }
+        .container .hangman-draw .the-draw .the-man .head.crying::before {
+          content: "\f5b3";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 45px; }
+        .container .hangman-draw .the-draw .the-man .head.crying::after {
+          content: "Please, don't let me die";
+          position: absolute;
+          width: 135px;
+          height: 30px;
+          background-color: #b5b5b5;
+          padding: 5px;
+          top: 8px;
+          left: 60px;
+          border-radius: 25px;
+          font-size: 14px; }
+        .container .hangman-draw .the-draw .the-man .head.died::before {
+          content: "\f5c8";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 45px; }
+        .container .hangman-draw .the-draw .the-man .head.died::after {
+          content: "I can't do it anymore";
+          position: absolute;
+          width: 122px;
+          height: 30px;
+          background-color: #b5b5b5;
+          padding: 5px;
+          top: 8px;
+          left: 60px;
+          border-radius: 25px;
+          font-size: 14px; }
+      .container .hangman-draw .the-draw .the-man .body {
+        position: absolute;
+        background-color: #222;
+        width: 4px;
+        height: 100px;
+        top: 105px;
+        left: 137px;
+        display: none; }
+      .container .hangman-draw .the-draw .the-man .arm {
+        display: none; }
+        .container .hangman-draw .the-draw .the-man .arm::before, .container .hangman-draw .the-draw .the-man .arm::after {
+          content: "";
+          position: absolute;
+          width: 50px;
+          height: 4px;
+          background-color: #222;
+          top: 140px; }
+        .container .hangman-draw .the-draw .the-man .arm::before {
+          left: 91px;
+          transform: rotate(30deg); }
+        .container .hangman-draw .the-draw .the-man .arm::after {
+          left: 137px;
+          transform: rotate(-30deg); }
+      .container .hangman-draw .the-draw .the-man .legs {
+        display: none; }
+        .container .hangman-draw .the-draw .the-man .legs::before, .container .hangman-draw .the-draw .the-man .legs::after {
+          content: "";
+          position: absolute;
+          width: 50px;
+          height: 4px;
+          background-color: #222;
+          top: 214px; }
+        .container .hangman-draw .the-draw .the-man .legs::before {
+          left: 91px;
+          transform: rotate(-30deg); }
+        .container .hangman-draw .the-draw .the-man .legs::after {
+          left: 137px;
+          transform: rotate(30deg); }
+    .container .hangman-draw.wrong-1 .the-draw {
+      display: block; }
+    .container .hangman-draw.wrong-2 .the-stand {
+      display: block; }
+    .container .hangman-draw.wrong-3 .the-hang {
+      display: block; }
+    .container .hangman-draw.wrong-4 .the-rope {
+      display: block; }
+    .container .hangman-draw.wrong-5 .the-man .head {
+      display: block; }
+    .container .hangman-draw.wrong-6 .the-man .body {
+      display: block; }
+    .container .hangman-draw.wrong-7 .the-man .arm {
+      display: block; }
+    .container .hangman-draw.wrong-8 .the-man .legs {
+      display: block; }
+  .container .letters {
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px; }
+    .container .letters .letter-box {
+      width: 55px;
+      height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #009688;
+      color: #fff;
+      font-size: 24px;
+      margin-right: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer; }
+      .container .letters .letter-box:hover {
+        background-color: #02b7a6; }
+      .container .letters .letter-box.clicked {
+        background-color: #222;
+        opacity: 0.2;
+        pointer-events: none; }
+    .container .letters.finished {
+      pointer-events: none; }
+  .container .guessed-letters {
+    margin: 10px auto;
+    background-color: #f8f8f8;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 104px; }
+    .container .guessed-letters span {
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      margin-right: 10px;
+      text-align: center;
+      line-height: 60px;
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: #fdfdfd;
+      border-bottom: 3px solid #222;
+      transition: 0.3s; }
+      .container .guessed-letters span.white-space {
+        background: none;
+        border-bottom: none;
+        position: relative; }
+        .container .guessed-letters span.white-space::before {
+          content: "";
+          width: 20px;
+          height: 4px;
+          background-color: #222;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%); }
 
 /*# sourceMappingURL=main.css.map */

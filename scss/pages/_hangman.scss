@@ -1,0 +1,381 @@
+$drawColor: #222;
+$drawWidth: 4px;
+
+.container {
+  margin: 20px auto;
+  .game-info {
+    display: flex;
+    justify-content: space-between;
+    .category {
+      span {
+        text-transform: capitalize;
+        color: #e91e63;
+        font-weight: bold;
+      }
+    }
+  }
+  hr {
+    border: 1px solid #eee;
+  }
+  .hangman-draw {
+    position: relative;
+    background-color: #f8f8f8;
+    padding: 20px;
+    height: 324px;
+    .crowd {
+      img {
+        position: absolute;
+        width: 42%;
+        left: 0;
+        bottom: 0;
+        image-rendering: pixelated;
+      }
+      &.angryOne,
+      &.angryTwo,
+      &.angryThree {
+        &::before {
+          content: "\f075";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          position: absolute;
+          font-size: 170px;
+          top: 0;
+          left: 70px;
+          z-index: 1;
+          color: #b5b5b5;
+        }
+      }
+      &.angryOne {
+        &::after {
+          content: "Why is he still alive! 😡";
+          position: absolute;
+          z-index: 2;
+          color: #000;
+          font-size: 14px;
+          top: 112px;
+          left: 91px;
+        }
+      }
+      &.angryTwo {
+        &::after {
+          content: "You are Gonna die baby 😁";
+          position: absolute;
+          z-index: 2;
+          color: #000;
+          font-size: 14px;
+          top: 112px;
+          left: 82px;
+        }
+      }
+      &.angryThree {
+        &::after {
+          content: "Good luck in the afterlife 😜";
+          position: absolute;
+          z-index: 2;
+          color: #000;
+          font-size: 14px;
+          top: 112px;
+          left: 78px;
+        }
+      }
+    }
+    .the-draw {
+      position: relative;
+      width: 85px;
+      height: 100%;
+      border-bottom: 40px solid $drawColor;
+      margin: auto;
+      bottom: -18px;
+      display: none;
+
+      .the-stand {
+        position: absolute;
+        width: $drawWidth;
+        background-color: $drawColor;
+        height: 100%;
+        left: 50%;
+        margin-left: -2px;
+        display: none;
+      }
+      .the-hang {
+        display: none;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100px;
+          height: $drawWidth;
+          background-color: $drawColor;
+          left: 42px;
+          top: 15px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: $drawWidth;
+          height: 30px;
+          background-color: $drawColor;
+          left: 138px;
+          top: 15px;
+        }
+      }
+      .the-rope {
+        display: none;
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        left: 104px;
+        top: 45px;
+        border: $drawWidth dashed $drawColor;
+      }
+      .the-man {
+        .head {
+          display: none;
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          border: $drawWidth solid $drawColor;
+          left: 114px;
+          top: 55px;
+          &.scared {
+            &::before {
+              content: "\f57f";
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 45px;
+            }
+            &::after {
+              content: "Be Careful I'm gonna die";
+              position: absolute;
+              width: 144px;
+              height: 30px;
+              background-color: #b5b5b5;
+              padding: 5px;
+              top: 8px;
+              left: 60px;
+              border-radius: 25px;
+              font-size: 14px;
+            }
+          }
+          &.crying {
+            &::before {
+              content: "\f5b3";
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 45px;
+            }
+            &::after {
+              content: "Please, don't let me die";
+              position: absolute;
+              width: 135px;
+              height: 30px;
+              background-color: #b5b5b5;
+              padding: 5px;
+              top: 8px;
+              left: 60px;
+              border-radius: 25px;
+              font-size: 14px;
+            }
+          }
+          &.died {
+            &::before {
+              content: "\f5c8"; //f5a4 f579
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 45px;
+            }
+            &::after {
+              content: "I can't do it anymore";
+              position: absolute;
+              width: 122px;
+              height: 30px;
+              background-color: #b5b5b5;
+              padding: 5px;
+              top: 8px;
+              left: 60px;
+              border-radius: 25px;
+              font-size: 14px;
+            }
+          }
+        }
+        .body {
+          position: absolute;
+          background-color: $drawColor;
+          width: $drawWidth;
+          height: 100px;
+          top: 105px;
+          left: 137px;
+          display: none;
+        }
+        .arm {
+          display: none;
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: $drawWidth;
+            background-color: $drawColor;
+            top: 140px;
+          }
+          &::before {
+            left: 91px;
+            transform: rotate(30deg);
+          }
+          &::after {
+            left: 137px;
+            transform: rotate(-30deg);
+          }
+        }
+        .legs {
+          display: none;
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: $drawWidth;
+            background-color: $drawColor;
+            top: 214px;
+          }
+          &::before {
+            left: 91px;
+            transform: rotate(-30deg);
+          }
+          &::after {
+            left: 137px;
+            transform: rotate(30deg);
+          }
+        }
+      }
+    }
+    &.wrong-1 {
+      .the-draw {
+        display: block;
+      }
+    }
+    &.wrong-2 {
+      .the-stand {
+        display: block;
+      }
+    }
+    &.wrong-3 {
+      .the-hang {
+        display: block;
+      }
+    }
+    &.wrong-4 {
+      .the-rope {
+        display: block;
+      }
+    }
+    &.wrong-5 {
+      .the-man {
+        .head {
+          display: block;
+        }
+      }
+    }
+    &.wrong-6 {
+      .the-man {
+        .body {
+          display: block;
+        }
+      }
+    }
+    &.wrong-7 {
+      .the-man {
+        .arm {
+          display: block;
+        }
+      }
+    }
+    &.wrong-8 {
+      .the-man {
+        .legs {
+          display: block;
+        }
+      }
+    }
+  }
+  .letters {
+    padding: 15px;
+    text-align: center;
+    @include flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    .letter-box {
+      width: 55px;
+      height: 55px;
+      @include flex;
+      background-color: #009688;
+      color: #fff;
+      font-size: 24px;
+      margin-right: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        background-color: #02b7a6;
+      }
+      &.clicked {
+        background-color: #222;
+        opacity: 0.2;
+        pointer-events: none;
+      }
+    }
+    &.finished {
+      pointer-events: none;
+    }
+  }
+  .guessed-letters {
+    margin: 10px auto;
+    background-color: #f8f8f8;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 104px;
+    span {
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      margin-right: 10px;
+      text-align: center;
+      line-height: 60px;
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: #fdfdfd;
+      border-bottom: 3px solid #222;
+      transition: 0.3s;
+      &.white-space {
+        background: none;
+        border-bottom: none;
+        position: relative;
+        &::before {
+          content: "";
+          width: 20px;
+          height: 4px;
+          background-color: #222;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}
