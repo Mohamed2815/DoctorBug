@@ -106,6 +106,12 @@ document.addEventListener("click", (e) => {
         icon: "success",
         text: `You guessed it right`,
         confirmButtonText: "Play again?",
+        backdrop: `
+          rgba(0,0,123,0.4)
+          url("../../images/love.gif")
+          left top
+          no-repeat
+        `,
       }).then(function () {
         location.reload();
       });
