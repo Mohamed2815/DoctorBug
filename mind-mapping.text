@@ -1,0 +1,22 @@
+Done
+01 - create Jason Object for Questions
+02 - Satrt Creating the HTML Mark up + styling
+03 - Adding dummy data
+04 - styling
+In Progress
+05 - fetch a number of Questions
+06 - Show questions count + questions category
+07 - Show the number of bullets depend on question count
+08 - set the number of wrong and false answers
+09 - Create Countdown timer
+10 - Fetch the questions from the json Object
+11 - Show first quesrion
+12 - Check Answer and hide Question then show next one
+13 - If the time end, mark the question as wrong and show next question
+14 - Add class on bullets after Answering the quesstion
+15 - If question finished show the result
+
+ideas
+- Many Jason Object and choose language
+- Add many questions and choose only 10 randomly
+- Randomize answers pattern (Shuffle function)
